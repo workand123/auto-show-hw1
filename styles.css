@@ -1,4 +1,3 @@
-/* "Skip to Main Content" сілтемесінің стилі */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -13,7 +12,6 @@
     top: 10px;
 }
 
-/* Жоғарғы бөлім стилі */
 .header {
     text-align: center;
     background: #222;
@@ -21,7 +19,6 @@
     padding: 20px;
 }
 
-/* Навигация */
 .nav ul {
     display: flex;
     justify-content: center;
@@ -46,7 +43,6 @@
     border-radius: 5px;
 }
 
-/* Автокөліктер галереясы */
 .car-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -62,15 +58,20 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover эффект */
 .car-grid img:hover {
     transform: scale(1.05);
 }
 
-/* Төменгі бөлім стилі */
 .footer {
     text-align: center;
     background: #222;
     color: white;
     padding: 10px;
+}
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 10px; 
 }
