@@ -3,39 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Show</title>
+    <title>Auto Show - Басты бет</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Перейти к основному содержанию</a>
 
-    <header>
-        <h1>Қош келдіңіздер!</h1>
+    <!-- "Skip to Main Content" сілтемесі -->
+    <a href="#main" class="skip-link">Негізгі бөлімге өту</a>
+
+    <!-- Жоғарғы бөлім -->
+    <header class="header">
+        <h1>Auto Show</h1>
+        <p>Көліктер әлеміне қош келдіңіз!</p>
     </header>
 
-    <nav>
+    <!-- Навигация -->
+    <nav class="nav">
         <ul>
-            <li><a href="#">Басты бет</a></li>
-            <li><a href="#">Көліктер</a></li>
-            <li><a href="#">Байланыс</a></li>
+            <li><a href="index.html">Басты бет</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="services.html">Қызметтер</a></li>
+            <li><a href="contact.html">Байланыс</a></li>
         </ul>
-        <img src="img/logo.png.jpg" alt="Логотип">
     </nav>
 
-    <main id="main-content">
-        <section class="grid">
-            <div><img src="img/car1.jpeg" alt="Көлік 1"></div>
-            <div><img src="img/car2.jpg" alt="Көлік 2"></div>
-        </section>
+    <!-- Негізгі бөлім -->
+    <main id="main">
+        <h2>Біздің автосалонға қош келдіңіз!</h2>
+        <p>Кез келген талғамға сай ең үздік көліктер.</p>
 
-        <section class="flex">
-            <div><img src="img/car3.jpg" alt="Көлік 3"></div>
-            <div><img src="img/car4.jpg" alt="Көлік 4"></div>
-        </section>
+        <!-- Автокөліктер галереясы -->
+        <div class="car-grid">
+            <img src="car1.jpeg" alt="Көлік 1">
+            <img src="car2.jpg" alt="Көлік 2">
+            <img src="car3.jpg" alt="Көлік 3">
+            <img src="car4.jpg" alt="Көлік 4">
+        </div>
     </main>
 
-    <footer>
+    <!-- Төменгі бөлім -->
+    <footer class="footer">
         <p>© 2025 Auto Show. Барлық құқықтар қорғалған.</p>
     </footer>
+
 </body>
 </html>
+
