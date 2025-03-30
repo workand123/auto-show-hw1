@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Show - Басты бет</title>
+    <title>Auto Show - Галерея</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <a href="#main" class="skip-link">Негізгі бөлімге өту</a>
-    <header class="header">
+<body onload="addTabIndex()">
+    <header>
         <h1>Auto Show</h1>
         <p>Көліктер әлеміне қош келдіңіз!</p>
     </header>
-    <nav class="nav">
+
+    <nav>
         <ul>
             <li><a href="index.html">Басты бет</a></li>
             <li><a href="gallery.html">Галерея</a></li>
@@ -20,19 +21,25 @@
             <li><a href="contact.html">Байланыс</a></li>
         </ul>
     </nav>
-    <main id="main">
-        <h2>Біздің автосалонға қош келдіңіз!</h2>
-        <p>Кез келген талғамға сай ең үздік көліктер.</p>
-        <div id="image">Hover over an image below to display here.</div>
+
+    <main>
+        <h2>Фото-галерея</h2>
+        <p>Төмендегі суреттердің үстіне апарсаңыз, олар жоғарғы бөлікте көрсетіледі.</p>
+
+        <div id="image">Мұнда суретті көрсету үшін, төмендегі суреттің үстіне апарыңыз.</div>
+
+        <div class="gallery">
+            <img src="images/car1.jpg" alt="Қызыл спорттық көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <img src="images/car2.jpg" alt="Көк седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <img src="images/car3.jpg" alt="Қара джип" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <img src="images/car4.jpg" alt="Ақ электромобиль" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <img src="images/car5.jpg" alt="Жасыл ретро көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+            <img src="images/car6.jpg" alt="Сұр люкс седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+        </div>
     </main>
-    <img src="images/car1.jpeg" alt="Көлік 1"width="500" height="auto""Car 1" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/car2.jpg" alt="Көлік 2"width="500" height="auto""Car 2" onmouseover="upDate(this)" onmouseout="undo()">
-    <img src="images/car3.jpg" alt="Көлік 3"width="500" height="auto">
-    <img src="images/car4.jpg" alt="Көлік 4"width="500" height="auto">
-    <!-- Төменгі бөлім -->
-    <footer class="footer">
+
+    <footer>
         <p>© 2025 Auto Show. Барлық құқықтар қорғалған.</p>
     </footer>
-<script src="script.js"></script>
 </body>
 </html>
