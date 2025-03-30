@@ -1,13 +1,25 @@
 function upDate(previewPic) {
-    console.log("Mouse over:", previewPic.alt);
+    console.log("Hover or focus:", previewPic.alt);
 
-    document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
-    document.getElementById("image").innerHTML = previewPic.alt;
+    let imageDiv = document.getElementById("image");
+    imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+    imageDiv.innerHTML = previewPic.alt;
 }
 
 function undo() {
-    console.log("Mouse out: Resetting image");
+    console.log("Mouse leave or blur: Resetting image");
 
-    document.getElementById("image").style.backgroundImage = "url('')";
-    document.getElementById("image").innerHTML = "Hover over an image below to display here.";
+    let imageDiv = document.getElementById("image");
+    imageDiv.style.backgroundImage = "url('')";
+    imageDiv.innerHTML = "Мұнда суретті көрсету үшін, төмендегі суреттің үстіне апарыңыз.";
+}
+
+// Функция: Барлық суреттерге tabindex атрибутын автоматты түрде қосу
+function addTabIndex() {
+    console.log("Page loaded: Adding tabindex to images");
+
+    let images = document.querySelectorAll(".gallery img");
+    for (let i = 0; i < images.length; i++) {
+        images[i].setAttribute("tabindex", "0");
+    }
 }
