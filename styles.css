@@ -60,30 +60,65 @@ nav a {
     transform: scale(1.1);
     border-color: red;
 }
-/* ======= Mobile View (қосымша өзгертулер қажет емес) ======= */
+
 .car {
-  width: 100%;  /* мобилдік көрініс үшін */
+    width: 100%;  /* мобилдік көрініс үшін */
 }
 
-/* ======= Tablet View: 772px және жоғары ======= */
 @media screen and (min-width: 772px) {
-  .car {
-    width: 45vw; /* div ені 45% */
-    display: inline-block;
-    margin: 1%;
-    vertical-align: top;
-  }
+    .car {
+        width: 45vw; /* div ені 45% */
+        display: inline-block;
+        margin: 1%;
+        vertical-align: top;
+    }
 
-  .car img {
-    max-height: 30vh; /* сурет биіктігі 30% */
-    width: 100%;
-    object-fit: cover;
-  }
+    .car img {
+        max-height: 30vh; /* сурет биіктігі 30% */
+        width: 100%;
+        object-fit: cover;
+    }
 }
 
-/* ======= Large Screen View: 998px және жоғары ======= */
 @media screen and (min-width: 998px) {
-  .car {
-    width: 30vw; /* div ені 30% */
-  }
+    .car {
+        width: 30vw; /* div ені 30% */
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery img {
+        transition: none;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    nav {
+        background-color: #444;
+    }
+
+    footer {
+        background-color: #444;
+        color: #fff;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    nav {
+        background-color: #f8f9fa;
+    }
+
+    footer {
+        background-color: #f8f9fa;
+    }
 }
