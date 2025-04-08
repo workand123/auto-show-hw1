@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Show - Галерея</title>
     <link rel="stylesheet" href="styles.css">
+>
+    <style>
+        @media (prefers-reduced-motion: reduce) {
+            img {
+                transition: none;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #333;
+                color: #fff;
+            }
+
+            nav {
+                background-color: #444;
+            }
+
+            footer {
+                background-color: #444;
+                color: #fff;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: #fff;
+                color: #000;
+            }
+
+            nav {
+                background-color: #f8f9fa;
+            }
+
+            footer {
+                background-color: #f8f9fa;
+            }
+        }
+    </style>
+
     <script defer src="script.js"></script>
 </head>
 <body onload="addTabIndex()">
@@ -26,26 +66,25 @@
         <h2>Фото-галерея</h2>
         <p>Төмендегі суреттердің үстіне апарсаңыз, олар жоғарғы бөлікте көрсетіледі.</p>
 
-        <div id="image">Мұнда суретті көрсету үшін, төмендегі суреттің үстіне апарыңыз.</div>
-        <!-- Мысал көлік карточкасы -->
-<div class="car">
-  <img src="images/car6.jpg" alt="Автокөлік суреті">
-  <p>McLaren 720S — спортивный автомобиль, созданный британским автопроизводителем McLaren Automotive. Впервые был показан на Женевском автосалоне в 2017 году. Пришел на смену McLaren 650S.</p>
-</div>
+        <div id="image" aria-live="polite">Мұнда суретті көрсету үшін, төмендегі суреттің үстіне апарыңыз.</div>
+     
+        <div class="car">
+            <img src="images/car6.jpg" alt="McLaren 720S автокөлік суреті" />
+            <p>McLaren 720S — британдық McLaren Automotive компаниясы жасаған спорттық автомобиль.</p>
+        </div>
 
-<div class="car">
-  <img src="images/car7.jpg" alt="Автокөлік суреті">
-  <p>Audi 100, с 1994 года Audi A6, — семейство спортивных автомобилей бизнес-класса, выпускающихся под маркой Audi, внутреннее обозначение — «тип C». </p>
-</div>
+        <div class="car">
+            <img src="images/car7.jpg" alt="Audi 100 автокөлік суреті" />
+            <p>Audi 100, қазіргі уақытта Audi A6 — Audi компаниясының спорттық бизнес-класындағы көлігі.</p>
+        </div>
 
-
-        <div class="gallery">
-            <img src="images/car1.jpg" alt="Қызыл спорттық көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
-            <img src="images/car2.jpg" alt="Көк седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
-            <img src="images/car3.jpg" alt="Қара джип" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
-            <img src="images/car4.jpg" alt="Ақ электромобиль" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
-            <img src="images/car5.jpg" alt="Жасыл ретро көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
-            <img src="images/car6.jpg" alt="Сұр люкс седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()">
+        <div class="gallery" role="region" aria-label="Автокөліктер галереясы">
+            <img src="images/car1.jpg" alt="Қызыл спорттық көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
+            <img src="images/car2.jpg" alt="Көк седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
+            <img src="images/car3.jpg" alt="Қара джип" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
+            <img src="images/car4.jpg" alt="Ақ электромобиль" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
+            <img src="images/car5.jpg" alt="Жасыл ретро көлік" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
+            <img src="images/car6.jpg" alt="Сұр люкс седан" onmouseover="upDate(this)" onmouseleave="undo()" onfocus="upDate(this)" onblur="undo()" tabindex="0">
         </div>
     </main>
 
